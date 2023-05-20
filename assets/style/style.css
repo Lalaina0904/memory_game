@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	background: #a1b7d7;
+	overflow: hidden;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.wrapper {
+	box-sizing: border-box;
+	padding: 2.5rem 3rem;
+	background: #0e1331;
+	box-shadow: 0px 0px 10px 5px #1d5e7c;
+}
+
+#game_container {
+	position: relative;
+	display: grid;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.stats_container {
+	text-align: right;
+	margin-bottom: 1.2rem;
+	color: #fff;
+}
+
+.stats_container span {
+	color: #fff;
+}
+
+img {
+	width: 100%;
+}
+
+.card-container {
+	position: relative;
+	width: 6rem;
+	height: 6rem;
+	cursor: pointer;
+}
+
+.card-before,
+.card-after {
+	position: absolute;
+	border-radius: 5px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid #cf5713;
+	transition: transform 0.7s ease-out;
+	backface-visibility: hidden;
+}
+
+.card-before {
+	background: #ffffff;
+	font-size: 2.8rem;
+	font-weight: 700;
+}
+
+.card-after {
+	background: #fff;
+	transform: rotateY(180deg);
+}
+
+.card-container.flip .card-before {
+	transform: rotateY(180deg);
+}
+
+.card-container.flip .card-after {
+	transform: rotateY(0deg);
+}
+
+.controls {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background: #0e1331;
+}
+
+button {
+	border: none;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+#stop {
+	margin-top: 1rem;
+	font-size: 1rem;
+	text-align: center;
+	display: block;
+	width: 150px;
+	background: #cf5713;
+	box-shadow: 0 0 10px 1px #c85e17;
+	color: #ffffff;
+	padding: 0.8rem;
+}
+
+.controls button {
+	font-size: 1.3rem;
+	box-shadow: 0 0.6rem 2em #1d5e7c;
+}
+
+.hide {
+	display: none;
+}
+
+#result {
+	text-align: center;
+	color: #fff;
+}
+
+#result h2 {
+	font-size: 2rem;
+}
+
+#result h4 {
+	font-size: 1.8rem;
+	margin: 0.6rem 0 1rem 0;
+}
